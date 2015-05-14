@@ -1,0 +1,33 @@
+{{extend 'layout.html'}}
+
+<div class="tabtable tabs-left">
+
+    <ul class="nav nav-tabs global-sidebar pull-left" style="margin-right: 0px">
+        <li class="nav-header">北苑建设</li>
+        <li class="active">
+            <a href="{{=URL('tucao')}}">我要吐槽</a>
+        </li>
+    </ul>
+
+    <div class="tab-content global-content">
+		<center><h3> {{=tucao.title}}</h3></center>
+		{{=tucao.tucao_body}}
+
+		<div class="double-line"></div>
+
+		{{if len(comments):}}
+			<h4>大家对该吐槽的评论：</h4>
+			{{for comment in comments:}}
+			<blockquote>{{=comment.comment_body}}</blockquote>
+			{{pass}}
+		{{else:}}
+			<h4><br>目前还没有评论</h4>
+			{{pass}}
+
+		<div class="double-line"></div>
+
+		<h4>做文明北苑人，请文明发表评论O(∩_∩)O~</h4>
+		{{=form}}
+	</div>
+
+</div>

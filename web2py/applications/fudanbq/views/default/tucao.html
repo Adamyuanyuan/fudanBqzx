@@ -1,0 +1,65 @@
+{{extend 'layout.html'}}
+
+<link href="{{=URL('static', 'css/custom/timeline.css')}}" rel="stylesheet"/>
+
+<div class="tabtable tabs-left">
+
+	<ul class="nav nav-tabs global-sidebar pull-left" style="margin-right: 0px">
+        <li class="nav-header">北苑建设</li>
+        <li class="active">
+            <a href="#">我要吐槽</a>
+        </li>
+    </ul>
+
+    <div class="tab-content global-content">
+
+        <div id="Container">
+		  	<div class="timeline_container">
+		    	<div class="timeline">
+		      		<div class="plus"></div>
+		      		<div class="plus2"></div>
+		    	</div>
+		  	</div>
+		  	{{for tucao in tucaos:}}
+		  	<div class="timeline-item">
+		  		<h3> <span class="fl">游客</span> <span class="fr">2014-01-01 00:00:00</span> </h3>
+			    <p class="con">{{=A(tucao.title, _href=URL("tucao_show", args=tucao.id))}}</p>
+			</div>
+			{{pass}}
+		</div>
+
+		<div class="double-line"></div>
+
+		<h4>做文明北苑人，请文明发表评论O(∩_∩)O~</h4>
+		<div class="comment pull-left">
+			{{=form}}
+			{{pass}}
+		</div>
+
+	</div>
+
+</div>
+
+
+<script src="{{=URL('static', 'js/jquery-1.11.0.min.js')}}"></script>
+<script src="{{=URL('static', 'js/timeline.js')}}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  /*时间轴*/
+  $('#Container').masonry({itemSelector : '.timeline-item'});
+	function Arrow_Points(){
+	  var s = $("#Container").find(".timeline-item");
+	  $.each(s,function(i,obj){
+		var posLeft = $(obj).css("left");
+		if(posLeft == "0px"){
+		  html = "<span class='rightCorner'></span>";
+		  $(obj).prepend(html);
+		} else {
+		  html = "<span class='leftCorner'></span>";
+		  $(obj).prepend(html);
+		}
+	  });
+	}
+	Arrow_Points();
+});
+</script>

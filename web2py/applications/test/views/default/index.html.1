@@ -1,0 +1,112 @@
+{{extend 'layout.html'}}
+{{extend 'layout.html'}}
+<style type="text/css">
+.item{width:700px;height:400px;overflow:hidden;}
+.item img{width:700px;height: 400px;}
+.my-news ul{list-style: none;padding:0;margin-left:0;}
+.tab-pane h3{text-align: center;}
+.fl{float:left;}
+</style>
+<div class="tabtable span12 tabs-left">
+    <div class="span2 pull-right">
+        <embed src="http://player.youku.com/player.php/sid/XNjg1MDgxMDAw/v.swf" allowFullScreen="true" quality="high" width="300" height="240" align="right" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+    </div>
+    <ul class="nav nav-tabs span1.5">
+        <li class="nav-header">快捷入口</li>
+        <li class="active">
+            <a href="">首页</a>
+        </li>
+        <li>
+            <a href="/joinus/default/joinus">加入园委会</a>
+        </li>
+        <li>
+            <a href="#phones" data-toggle="tab">常用电话</a>
+        </li>
+        <li>
+            <a href="/joinus/default/services">电脑报修</a>
+        </li>
+        <li>
+            <a href="/joinus/default/services/poster">北区风景线</a>
+        </li>
+    </ul>
+
+
+    <div class="tab-content span7">
+        <div class="tab-pane active">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <!-- Carousel items -->
+                <div class="carousel-inner">
+                    <div class="active item">
+                        <img src="{{=URL('static','images/1.jpg')}}" alt="" width="700px" />
+                    </div>
+                    <div class="item">
+                        <img src="{{=URL('static','images/2.jpg')}}" alt="" width="700px" />
+                    </div>
+                    <div class="item">
+                        <img src="{{=URL('static','images/3.jpg')}}" alt="S" width="700px"  />
+                    </div>
+                    <div class="item">
+                        <img src="{{=URL('static','images/4.jpg')}}" alt="JSON" width="700px" />
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a>
+            </div>
+            <div class="my-news">
+                <ul id="news-list">
+                    <li>
+                        <a href="#news1" data-toggle="tab">第十二届北苑文明单元评比大赛决赛即将展开</a>
+                        <span style="float:right;">2014-5-10</span>
+                    </li>
+                    <li>
+                        <a href="#news2" data-toggle="tab">“爱在北苑，点滴构筑幸福缘” </a>
+                        <span style="float:right;">2014-10-01</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-pane" id="phones">
+            <pre>
+北苑管委会学生事务办公室：55664207（73号201室）
+北苑管委会后勤保障办公室：65642535（73号202室）
+复旦保卫处：6564222；保卫处北苑值班室：65642031
+物业公司：65642947（73号101室）
+物业维修：65643299（73号102室）  
+网通报修：55072065（26号102室）
+校医院：65642451,65642452；校医院值班电话：65642879
+食堂监督电话：65643116；北苑体育馆电话：65642128
+北苑洗衣房：61447815；北苑水电科：61446911
+北苑废品回收：13044628172
+北苑门卫：55664478（南门）；55664479（北门）
+北苑门口便利店投诉举报反馈（复旦后勤服务有限公司行政办公室）：65643129
+校内201电话机故障维修：65643799
+校内故障录音电话:65832222  北苑体育馆机房:65642897
+有线电视或报修（第五教学楼一楼102室复旦有线管理站）：65643120
+送水电话：获特满：55665180
+北苑阳光平台“阳光心情”热线：55665223,55665570
+ 
+校内各部门电话可从校园网主页最下一行“电话黄页”中查询，也可拨打复旦总机65642222问询。
+            </pre>
+        </div>
+        <div class="tab-pane" id="news1"><!-- 对应新闻标题的新闻内容，替换掉文本内容即可 -->
+            <h3>第十二届北苑文明单元评比大赛决赛即将展开</h3>
+            <pre>
+第十二届北苑文明单元评比大赛决赛将于5月15日（周四）晚18：00-22：00再度来袭，地点北区体育馆一楼。有十支参赛单元分别是香港交流学院41-302、管理学院66-302、中文系69-102、管理学院66-101、计院09-601、文物与博物馆学50-301、数学学院46-202、社政学院70-601、生科学院08-102、新闻学院51-602
+            </pre>
+        </div>
+        <div class="tab-pane" id="news2">
+            <h3>“爱在北苑，点滴构筑幸福缘” 第十二届北苑文明单元评比决赛开启</h3>
+            <pre>
+“爱在北苑，点滴构筑幸福缘” 第十二届北苑文明单元评比决赛开启，附上大众评委招募要求。同学们赶紧行动起来吧。。
+            </pre>
+        </div>
+    </div>
+</div>

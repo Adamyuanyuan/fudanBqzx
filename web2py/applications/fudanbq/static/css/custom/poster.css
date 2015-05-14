@@ -1,0 +1,73 @@
+/** ========================================= Page of poster =========================================**/
+.top-line {
+  border-top: 1px solid #e6e6e6;
+  margin: 0px;
+  height: 4px;
+}
+
+#waterfall { 
+  margin: 4px 0px 24px 10px;
+}
+
+#waterfall li {
+  float:left;
+  display:inline;
+  list-style:none;
+  width: 251px;
+  margin: 8px 0px 20px 22px;
+}
+
+#waterfall li img {
+  max-width: 100%;
+}
+
+#waterfall li h4 {
+  font-size: 14px;
+}
+
+#waterfall li p {
+  font-size:12px;
+  color: #777777;
+  line-height: 22px;
+}
+
+.poster-main {
+  padding: 0px 22px 0px 22px;
+  background: url(../../images/poster-bg.jpg);
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -moz-border-image: url(scale.jpg) 0;
+  <!--[if lt IE 9]>
+  background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/poster-bg.jpg', sizingMethod='scale');
+  <![endif]--> }
+}
+
+.poster-main a {
+  display: block;
+}
+
+.poster-main a img { 
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.poster-main a:hover img {
+  border: 1px solid #999999;
+  box-shadow: 0px 0px 6px 2px #cccccc;
+}
+
+.poster-show {
+  padding-top: 14px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.poster-show img {
+  max-width: 600px;
+  margin-top: 4px;
+  margin-bottom: 36px;
+  padding: 4px;
+  border: 1px solid #dddddd;
+}

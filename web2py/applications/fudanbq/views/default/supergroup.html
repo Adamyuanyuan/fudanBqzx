@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+<ul class="inline">
+            <li class="nav-header">超级用户权利</li>
+            <li><a href="{{=URL('init','default','super')}}"><i class="icon-eye-open"></i>管理所有用户</a></li>
+            <li><a href="{{=URL('init','default','supergroup')}}"><i class="icon-search"></i>管理所有角色</a></li>
+            <li><a href="{{=URL('init','default','supermembership')}}"><i class="icon-th"></i>管理所有身份</a></li>
+</ul>
+{{=groups}}

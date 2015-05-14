@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+
+
+<div class="tabtable tabs-left">
+
+    <ul class="nav nav-tabs global-sidebar pull-left" style="margin-right: 0px">
+        <li class="nav-header">服务同学</li>
+        <li class="active">
+            <a href="{{=URL('fixpc')}}">在线电脑报修</a>
+        </li>
+    </ul>
+
+    <div class="tab-content global-content">
+		{{=grid}}
+	</div>
+</div>

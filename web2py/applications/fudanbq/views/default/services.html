@@ -1,0 +1,39 @@
+{{extend 'layout.html'}}
+
+<div class="tabtable tabs-left">
+
+    <ul class="nav nav-tabs global-sidebar pull-left" style="margin-right: 0px">
+        <li class="nav-header">服务同学</li>
+        <li class="active">
+            <a href="#fixpc" data-toggle="tab">在线电脑报修</a>
+        </li>
+        <li>
+            <a href="#haibao" data-toggle="tab" id="Ahaibao">海报横幅申请流程</a>
+        </li>
+    </ul>
+
+    <div class="tab-content global-content">
+        <div class="tab-pane active" id="fixpc">
+            <p>同学你好，如果你的电脑或网络有故障，又不知道如何处理，可以填写基本信息以告诉我们。我们会尽快与你联系，尽力解决你遇到的故障。:)</p>
+            <p>目前，我们仅面向复旦大学北苑生活园区的学生。所以请注意填写邮箱的部分，我们推荐使用地址后缀为 <strong>@fudan.edu.cn</strong> 的复旦邮箱申请。</p>
+            <p>点击<a href="{{=URL('fixpc')}}">报修</a>。</p>
+        </div>
+        <div class="tab-pane" id="haibao">
+            <h3>海报横幅等宣传手续的办理流程</h3>
+            <p>1.递交本校相关组织开出的介绍信（分管老师签章）或盖有复旦大学下属公章的申请书；</p> 
+            <p>
+               2.填写登记表，登记办理。海报需盖海报审批公章，并当场填写张贴海报截止日期。大海报限批1张；小海报（A4及以下）限批100张。横幅、传单和场地申请需另填写承诺书，并领取承诺书回执。横幅的承诺书回执交至北苑南门口保安处，登记后在指定位置悬挂横幅。海报张贴和横幅悬挂的最长申请时间为一周。如需延长请于截止日期前再次递交申请书办理续挂申请。
+            </p>
+            <p>
+                3.办理地点：北苑体育馆三楼301室（园委会办公室）
+            </p>
+            <p>
+                4.办理时间：周一至周五中午12：00~~13:00
+            </p>
+            <p>
+                <em>未经允许，严禁商业宣传活动进入北苑生活园区！</em>
+            </p>
+        </div>
+    </div>
+    
+</div>

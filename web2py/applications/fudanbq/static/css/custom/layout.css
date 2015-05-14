@@ -1,0 +1,116 @@
+/** ========================================= Layout ========================================= **/
+body {
+  background-color: #f6f6f6;
+  background: url(../../images/bg.jpg) repeat;
+}
+
+.container {
+  min-width: 979px;
+}
+
+.fill-white {
+  background-color:#ffffff;
+}
+
+.shadow-border {
+  border: 1px solid #e6e6e6;
+  box-shadow: 3px 1px 8px 2px #f0f0f0;
+}
+
+/** ========================================= Header ========================================= **/
+.logo {
+  padding-left: 10px;
+}
+
+.friend-site {
+  color: #409b2b;
+  font-size: 12px;
+  float: right;
+  padding-top: 16px;
+  padding-right: 16px;
+}
+
+/** ========================================= NavBar, modification on bootstrap ========================================= **/
+/** Background color of the navbar **/
+.navbar-inverse {
+  background-color: #59b734;
+  border-color: #61bc3e;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#67c741', endColorstr='#51ad2c', GradientType=0);
+}
+
+/** Margin of the navbar **/
+.navbar {
+  margin-bottom: 0px;
+}
+
+
+/** ========================================= Menus ========================================= **/
+/** Color of the menus **/
+.navbar .nav > li > a {
+  color: #fefefe;
+  padding-left: 14px;
+}
+
+/** Hover color of the menus **/
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #ffffff;
+  background-color: #9ee16d;
+}
+
+/** Background of the active menu **/
+.web2py-menu-active > a {
+  color: #ffffff;
+  background-color: #9ee16d;
+}
+
+/** Position of the first menu **/
+.web2py-menu-first {
+  padding-left: 18px;
+}
+
+/** ========================================= Log in ========================================= **/
+/** Hover color of "Log in" **/
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  color: #ffffff;
+  background-color: #9ee16d;
+}
+
+/** Color of the drop down arrow of "Log in" **/
+.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
+  border-top-color: #fefefe;
+  border-bottom-color: #fefefe;
+}
+
+/** ========================================= Search form ========================================= **/
+.input-append {
+  height: 8px;
+}
+
+.input-append input {
+  width: 120px;
+  height: 16px;
+}
+
+/** ========================================= Main body ========================================= **/
+.main-body {
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/** ========================================= Footer ========================================= **/
+.footer {
+  margin-top: -1px;
+  height: 4em;
+}
+
+.footer-content {
+  font-size: 12px;
+  color: #6c6c6c;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: auto;
+  bottom: -2em;
+}

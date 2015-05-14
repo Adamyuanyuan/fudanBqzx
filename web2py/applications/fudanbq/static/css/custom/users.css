@@ -1,0 +1,30 @@
+/** ========================================= Pages of Register, Login ... =========================================**/
+.users {
+  width: 400px;
+  border-left: 1px solid #cadac3;
+  border-right: 1px solid #cadac3;
+  border-top: 4px solid #81b170;
+  border-bottom: 2px solid #81b170;
+  background-color: #f8f8f8;
+  text-align: center;
+  margin: 4px auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.users .string {
+  width: 200px;
+}
+
+.users h3 {
+  color: #555555;
+}
+
+.users .password {
+  width: 200px;
+}
+
+.users .generic-widget {
+  width: 120px;
+}

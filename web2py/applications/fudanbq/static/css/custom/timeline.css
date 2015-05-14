@@ -1,0 +1,47 @@
+
+#Container {
+	POSITION: relative; PADDING-BOTTOM: 30px; MARGIN: 10px 0px 36px 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; HEIGHT: auto; OVERFLOW: hidden; PADDING-TOP: 20px
+}
+.timeline_container {
+	Z-INDEX: 50; TEXT-ALIGN: center; MARGIN: 0px auto; WIDTH: 29px; DISPLAY: block; HEIGHT: 100%; CURSOR: pointer
+}
+.timeline {
+	POSITION: absolute; MARGIN: 0px auto; WIDTH: 4px; DISPLAY: block; BACKGROUND: #eeeeee; FLOAT: left; HEIGHT: 100%; FONT-SIZE: 0px; TOP: 0px; LEFT: 340px;
+}
+.timeline DIV.plus {
+	Z-INDEX: 5000; POSITION: absolute; WIDTH: 29px; BACKGROUND: url(../../images/timeline.png) 0px -36px; HEIGHT: 10px; TOP: 0px; LEFT: -11px
+}
+.timeline DIV.plus2 {
+	POSITION: absolute; WIDTH: 10px; BOTTOM: 0px; BACKGROUND: url(../../images/timeline.png) -29px -26px; HEIGHT: 10px; LEFT: -3px
+}
+.leftCorner {
+	Z-INDEX: 99; POSITION: absolute; WIDTH: 36px; DISPLAY: block; HEIGHT: 26px; OVERFLOW: hidden
+}
+.rightCorner {
+	Z-INDEX: 99; POSITION: absolute; WIDTH: 36px; DISPLAY: block; HEIGHT: 26px; OVERFLOW: hidden
+}
+.rightCorner {
+	BACKGROUND: url(../../images/timeline.png) 0px 0px; TOP: 25px; RIGHT: -36px
+}
+.leftCorner {
+	BACKGROUND: url(../../images/timeline.png) -36px 0px; TOP: 10px; LEFT: -36px
+}
+
+.timeline-item {
+	BORDER-BOTTOM: #eaeaea 1px solid; POSITION: relative; BORDER-LEFT: #eaeaea 1px solid; PADDING-BOTTOM: 15px; LINE-HEIGHT: 30px; MARGIN: 20px 30px 0px; MIN-HEIGHT: 60px; PADDING-LEFT: 15px; WIDTH: 250px; PADDING-RIGHT: 15px; DISPLAY: block; FONT-FAMILY: "Microsoft JhengHei", "Microsoft YaHei"; WORD-WRAP: break-word; BACKGROUND: #ffffff; FLOAT: left; FONT-SIZE: 14px; BORDER-TOP: #eaeaea 1px solid; BORDER-RIGHT: #eaeaea 1px solid; PADDING-TOP: 0px; box-shadow: 0px 1px 8px rgba(202, 202, 202, 0.3)
+}
+.timeline-item H3 {
+	LINE-HEIGHT: 30px; DISPLAY: block; HEIGHT: 20px; FONT-WEIGHT: normal
+}
+.timeline-item H3 .fl {
+	FLOAT: left; COLOR: #363636; FONT-SIZE: 14px
+}
+.timeline-item H3 .fr {
+	TEXT-ALIGN: right; FLOAT: right; COLOR: #999999; FONT-SIZE: 12px
+}
+.timeline-item P.con {
+	BORDER-BOTTOM: #ececec 1px dashed; PADDING-BOTTOM: 12px; LINE-HEIGHT: 30px; DISPLAY: block; COLOR: #555555; BORDER-TOP: #ececec 1px dashed; FONT-WEIGHT: normal; PADDING-TOP: 12px
+}
+.timeline-item P {
+	TEXT-INDENT: 2em
+}

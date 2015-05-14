@@ -1,0 +1,8 @@
+{{extend 'layout.html'}}
+{{=form}}
+{{for post in comments:}}
+<div class="post">
+   {{=post.created_on}} {{=post.created_by.first_name}}
+  评论： <span class="post_body">{{=post.body}}</span>
+</div>
+{{pass}}

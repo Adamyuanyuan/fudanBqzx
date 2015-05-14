@@ -1,0 +1,56 @@
+{{extend 'layout.html'}}
+
+<div class="tabtable tabs-left">
+
+    <ul class="nav nav-tabs global-sidebar pull-left" style="margin-right: 0px">
+        <li class="nav-header">服务同学</li>
+        <li class="active">
+            <a href="#fixpc" data-toggle="tab">在线电脑报修</a>
+        </li>
+    </ul>
+
+    <div class="tab-content global-content">
+
+        <div class="span3 pull-right">
+            {{if auth.user!=None:}}
+            {{if auth.has_membership('supervisor',auth.user.id):}}
+            <ul class="nav nav-list">
+                <li class="nav-header">超级用户权利</li>
+                <li><a href="{{=URL('super')}}"><i class="icon-eye-open"></i>管理所有用户</a></li>
+                <li><a href="{{=URL('supergroup')}}"><i class="icon-search"></i>管理所有角色</a></li>
+                <li><a href="{{=URL('supermembership')}}"><i class="icon-th"></i>管理所有身份</a></li>
+                <li class="divider"></li>
+                <span></span>
+            </ul>
+            {{pass}}
+            {{pass}}
+            <h5>
+                <i class="icon-envelope"></i>评论或建议
+            </h5>
+            {{=LOAD('comments','post.load',ajax=True)}}
+        </div>
+
+        <div class="tab-pane active" id="fixpc">
+            <p>同学你好，如果你的电脑或网络有故障，又不知道如何处理，可以填写基本信息以告诉我们。我们会尽快与你联系，尽力解决你遇到的故障。:)</p>
+            <p>目前，我们仅面向复旦大学北苑生活园区的学生。所以请注意填写邮箱的部分，我们推荐使用地址后缀为 <strong>@fudan.edu.cn</strong> 的复旦邮箱申请。</p>
+            <p>如果你能<a href="{{=URL('user')}}">注册</a>并且留下建议，我们会非常感谢。</p>
+            <div>
+                {{if auth.user==None:}}
+                    <h3>填写表单</h3>
+                    {{=applyform}}
+                {{else:}}
+                    {{if auth.has_membership('fixman',auth.user.id):}}
+                    <span>{{=A("管理员处理申请",_href=URL('applylist'))}}</span>
+                    {{else:}}
+                    <h3>填写表单</h3>
+                    <div class="inline">
+                        <span>{{=A("查看自己的申请",_href=URL('selfapplies'))}}</span>
+                    </div>
+                    {{=applyform}}
+                    {{pass}}
+                {{pass}}
+            </div>
+        </div>
+
+    </div>
+</div>

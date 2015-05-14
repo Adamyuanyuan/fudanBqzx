@@ -1,0 +1,107 @@
+/** ========================================= Global =========================================**/
+pre {
+  font-size: 15px;
+  line-height: 2;
+  color: #606060;
+  background-color: #ffffff;
+  border: none;
+}
+
+.global-sidebar {
+  outline: none;
+  width: 170px;
+  padding-left: 33px;
+  padding-right: 0px;
+  margin-bottom: -9977px;
+  padding-bottom: 9999px;
+}
+
+.global-sidebar > .active > a,
+.global-sidebar > .active > a:hover,
+.global-sidebar > .active > a:focus {
+  outline: none;
+}
+
+.global-content {
+  font-size: 15px;
+  color: #606060;
+  line-height: 2;
+  border-top: 1px solid #e6e6e6;
+  margin: 0px 0px -9999px 0px;
+  padding: 20px 50px 9999px 40px;
+}
+
+.global-content h3 {
+  padding-top: 0px;
+}
+
+.global-content .tab-pane {
+  padding-bottom: 30px;
+}
+
+.global-content pre {
+  margin: -10px;
+  margin-bottom: -30px;
+}
+
+.global-content img {
+  margin-left: 12px;
+}
+
+.global-content embed {
+  margin-left: 18px;
+  margin-right: -20px;
+}
+
+.global-content ul {
+  margin-bottom: 28px;
+}
+
+.global-content li {
+  line-height: 26px;
+}
+
+.double-line {
+  height: 24px;
+  background: url(../../images/double-line.png) repeat-x;
+}
+
+.comment {
+  width: 320px;
+  border: 1px solid #cccccc;
+  border-top: 4px solid #777777;
+  border-bottom: 2px solid #999999;
+  background: url(../../images/bg-comment.png) repeat;
+  text-align: center;
+  margin: 6px auto;
+  margin-top: 12px;
+  margin-bottom: 30px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.comment .string {
+  width: 210px;
+}
+
+.comment .text {
+  width: 210px;
+  height: 100px;
+}
+
+div .flash {
+  color: #606060;
+  background-color: #fff;
+  border: 2px solid #59b734;
+  border-radius: 8px;
+  background-image: none;
+}
+
+.ie-lte8 div .flash {
+  filter: none; 
+}
+
+.ie-lte8 div .flash:hover {
+  filter: alpha(opacity=25);
+}
+

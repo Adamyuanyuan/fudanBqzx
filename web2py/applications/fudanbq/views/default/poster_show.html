@@ -1,0 +1,28 @@
+{{extend 'layout.html'}}
+
+<link href="{{=URL('static', 'css/custom/poster.css')}}" rel="stylesheet"/>
+
+<div class="global-content poster-show">
+	<center>
+		<h3> {{=image.title}}</h3>
+		<img src="{{=URL('download', args=image.filename)}}" />
+	</center>
+
+	<div class="double-line"></div>
+
+	{{if len(comments):}}
+		<h3>大家的评论：</h3>
+		{{for comment in comments:}}
+		<blockquote>{{=comment.author}} 说 ：{{=comment.body}}</blockquote>
+		{{pass}}
+	{{else:}}
+		<h4>目前还没有评论</h4>
+		{{pass}}
+
+	<div class="double-line"></div>
+
+	<h4>做文明北苑人，请文明发表评论O(∩_∩)O~</h4>
+	{{=form}}
+</div>
+
+

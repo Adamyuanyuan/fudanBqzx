@@ -1,0 +1,39 @@
+{{extend 'layout.html'}}
+
+<link href="{{=URL('static', 'css/custom/poster.css')}}" rel="stylesheet"/>
+<link href="{{=URL('static', 'css/lightbox.css')}}" rel="stylesheet" media="screen"/>
+
+<div class="top-line"></div>
+<ul id="waterfall">
+	{{for image in reversed(images):}}
+	<li>
+	    <div><img src="{{=URL('static', 'images/poster-top.jpg')}}" /></div>
+		<div class="poster-main">
+			<a href="{{=URL('download', args=image.filename)}}" data-lightbox="image-1" data-title="{{=T(image.title)}}">
+				<img src="{{=URL('download', args=image.filename)}}">
+			</a>
+			<div class="caption">
+				<h4>{{=A(image.title, _href=URL("poster_show", args=image.id))}}</h4>
+				<p>{{=image.description}}</p>
+			</div>
+		</div>
+	    <div><img src="{{=URL('static', 'images/poster-bot.jpg')}}" /></div>
+	</li>
+	{{pass}}
+</ul>
+
+
+<script src="{{=URL('static', 'js/jquery-1.11.0.min.js')}}"></script>
+<script src="{{=URL('static','js/lightbox.min.js')}}"></script>
+<script src="{{=URL('static','js/masonry.pkgd.min.js')}}"></script>
+<script>
+  $(function(){
+    
+    var $waterfall = $('#waterfall');
+    
+    $waterfall.masonry({
+      columnWidth: 20
+    });
+    
+  });
+</script>

@@ -1,0 +1,95 @@
+{{extend 'layout.html'}}
+<div class="tabtable span12 tabs-left">
+    <div class="span1 pull-right">
+    </div>
+
+    <ul class="nav nav-tabs span2">
+        <li class="nav-header">用户分类</li>
+        <li class="active">
+            <a href="#unregUser" data-toggle="tab">未注册用户</a>
+        </li>
+        <li>
+            <a href="#regUser" data-toggle="tab">注册用户</a>
+        </li>
+        <li>
+            <a href="#delFixman" data-toggle="tab">注销维修权限</a>
+        </li>
+    </ul>
+
+    <div class="span1">
+
+    </div>
+    <div class="tab-content span8">
+        <div class="tab-pane active" id="unregUser">
+            <table class="table table-hover">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <td>称呼</td>
+                        <td>宿舍</td>
+                        <td>电话</td>
+                        <td>邮箱</td>
+                        <td>领取者</td>
+                        <td>申请时间</td>
+                        <td>维修时间</td>
+                        <td>状态</td>
+                        <td>点击更新</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{for row in unregrows:}}
+                    <tr>
+                        <td>{{=row.name}}</td>
+                        <td>#{{=row.building}}-{{=row.room}}</td>
+                        <td>{{=row.phone}}</td>
+                        <td>{{=row.mail}}</td>
+                        <td>{{=row.receiver_id}}</td>
+                        <td>{{=row.apply_time}}</td>
+                        <td>{{=row.fix_time}}</td>
+                        <td>{{=row.status}}</td>
+                        <td><a class='btn' href="{{=URL('init','default','visitmanage/'+str(row.id))}}">更新</a></td>
+                    </tr>
+                    {{pass}}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="regUser">
+            <table class="table table-hover">
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <td>称呼</td>
+                        <td>宿舍</td>
+                        <td>电话</td>
+                        <td>邮箱</td>
+                        <td>领取者</td>
+                        <td>申请时间</td>
+                        <td>维修时间</td>
+                        <td>状态</td>
+                        <td>点击更新</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{for row in rows:}}
+                        {{applierrow=db(db.auth_user.id==row.applier_id).select()[0]}}
+                    <tr>
+                        <td>{{=applierrow.first_name}}</td>
+                        <td>#{{=applierrow.building}}-{{=applierrow.room}}</td>
+                        <td>{{=applierrow.phone}}</td>
+                        <td>{{=applierrow.email}}</td>
+                        <td>{{=row.receiver_id}}</td>
+                        <td>{{=row.apply_time}}</td>
+                        <td>{{=row.fix_time}}</td>
+                        <td>{{=row.status}}</td>
+                        <td><a class='btn' href="{{=URL('init','default','manage/'+str(row.id))}}">更新</a></td>
+                    </tr>
+                    {{pass}}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="delFixman">
+            <a class="btn"  href="{{=URL('init','default','delFixman')}}">注销维修权限</a>
+            <span class="help-block">此操作不可恢复，谨慎考虑。注销之后本帐号变为普通用户账号！</span>
+        </div>
+    </div>
+</div>
